@@ -10,7 +10,12 @@ min-height: 100px;
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+div {
+    display: block;
+}
+main{
+    padding: 60px;
+}
 /* PALETTE COLORI E SELETTORI */
 :root{
     --black: #0e0e0e;
@@ -21,7 +26,7 @@ html{
     --green: #008000;
 
     --outerBar: 28px;
-    --page-max-width: 1260px;
+    --page-max-width: 1380px;
     --header-spacing: 56px;
     --section-spacing: 120px;
 }
@@ -44,14 +49,13 @@ html{
 }
 
 /* START HEADER + NAV BAR */
-div {
-    display: block;
-}
+
 .headBox{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 101;
     height: 60px;
     background-color: var(--orange);
@@ -117,7 +121,6 @@ div {
 i:hover{
     cursor: pointer;
 }
-
 /* END HOVER */
 
 /* START MAIN SECTION */
@@ -134,14 +137,14 @@ i:hover{
     display: block;    
     padding-left: 8px;
     padding-right: 8px;
-    flex-basis: 33.33333%;
-    max-width: 33.33333%;
+    flex-basis: calc(100% / 3);
+    max-width: calc(100% / 3);
     position: relative;
     padding-top: 24px;
 }
 .article{
     position: relative;
-    width: calc((100% -20px) 3);
+    width: calc((100% - 20px) 3);
 }
 .article img{
     width: 100%;
@@ -203,24 +206,21 @@ i:hover{
 /* END MAIN SECTION */
 
 /* START FOOTER */
-.footer-container{
+.footerContainer{
     width: 100%;
     background-color: var(--grey);
     height: 110px;
-    margin-top: 60px;
 }
 .footerFlex{
     width: var(--page-max-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
     padding: 30px 0;
-    
-}
-.footerFlex h3{
+    align-items: center;    
     color: white;
-
+    
 }
 .footerFlex ul li{
     list-style: none;
@@ -235,16 +235,12 @@ i:hover{
     font-size: 13px;
     text-decoration: none;
 }
-.footer-right h5{
-    color: white;
+.footerRight h5{
     padding-bottom: 10px;
 
 }
-.footer-right i{
-    color: white;
+.footerRight i{
     font-size: 20px;
     padding-right: 5px;
 }
-.footerList{
-    display: flex;
-}
+/* END FOOTER */
