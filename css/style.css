@@ -35,8 +35,15 @@ html{
 .max-width{
     max-width: 100%;
 }
+.discountPrice{
+    color: var(--red);
+    font-weight: bold;
+}
+.linetrough{
+    text-decoration:line-through
+}
 
-/* HEADER + NAV BAR */
+/* START HEADER + NAV BAR */
 div {
     display: block;
 }
@@ -90,4 +97,96 @@ div {
 }
 #logo{
     max-height: 32px;
+}
+/* END HEADER */
+
+/* START HOVER SECTION */
+.article .img-top{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.article:hover .img-top{
+    display: inline;
+}
+
+/* END HOVER */
+
+/* START CAROUSEL */
+.carousell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productContainer{
+    width: var(--page-max-width);  
+    border: 1px solid black;
+    margin-top: 36px;
+}
+.productCard{
+    display: block;    
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+    position: relative;
+    padding-top: 24px;
+}
+.article{
+    position: relative;
+    width: calc((100% -20px) 3);
+    border: 1px solid black;
+}
+.article img{
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.heart{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: var(--white);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 35px;
+}
+.discount{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    background-color: var(--red);
+    width: 52px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.green{
+    position: absolute;
+    background-color: var(--green);
+    width: 105px;
+    height: 26;    
+    bottom: 100px;
+    left: 55px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.description{
+    position: relative;
+    margin-bottom: 8px;
+}
+.description h4{
+    text-transform: uppercase;
+}
+.description:last-child{
+    font-size: 14px;
 }
